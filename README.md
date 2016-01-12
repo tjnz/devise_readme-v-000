@@ -41,7 +41,7 @@ That's from the [Devise docs][Devise].
 
 Several of these modules come added for you by default if you run
 
-    `rails generate devise User`
+    rails generate devise User
 
 This generates a `User` model which includes this helpful bit at the top:
 
