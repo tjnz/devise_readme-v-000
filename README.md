@@ -120,6 +120,8 @@ Devise is rather a lot to take in all at once. The thing about large and magical
 [registerable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Registerable
 [database_authenticable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/DatabaseAuthenticable
 [recoverable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Recoverable
+[rememberable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Rememberable
 [trackable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Trackable
 [validatable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Validatable
+[lockable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Lockable
 [omniauthable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Omniauthable
