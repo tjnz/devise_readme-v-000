@@ -14,7 +14,7 @@ Want to allow multiple models to be signed in, each with different roles, granti
 
 Devise has an extensive collection of generators. It includes standard views and controllers. It will generate templates that include Bootstrap for you.
 
-It will also be, at times, a giant pain, because no magic is without a price.
+It will also be, at times, a giant pain, because no magic is without a price. Devise abstracts away a lot of implementation details. That can be very nice, but it can also make it challenging to setup and debug when things don't go exactly to plan.
 
 ## Architecture
 
@@ -102,7 +102,7 @@ The documentation on this is quite clear:
 
 ### [lockable]
 
-    Handles blocking a user access after a certain number of attempts. Lockable accepts two different strategies to unlock a user after it's blocked: email and time. The former will send an email to the user when the lock happens, containing a link to unlock its account. The second will unlock the user automatically after some configured time (ie 2.hours). It's also possible to setup lockable to use both email and time strategies.
+Handles blocking a user's access after a certain number of attempts. Lockable accepts two different strategies to unlock a user after it's blocked: email and time. The former will send an email to the user when the lock happens, containing a link to unlock its account. The second will unlock the user automatically after some configured time (ie 2.hours). It's also possible to setup lockable to use both email and time strategies.
 
 
 ### [omniauthable]
@@ -112,7 +112,7 @@ Honestly, this one doesn't give you a whole lot more than omniauth already does.
 
 ## Take a breath
 
-Devise is rather a lot to take in all at once. The thing about large and magical frameworks like Devise (and Rails for that matter) is that they aren't hard in the way that math problems are hard, but they are hard in the way that 
+Devise is rather a lot to take in all at once. The thing about large and magical frameworks like Devise (and Rails for that matter) is that they aren't hard in the way that math problems are hard, but they are hard in the way that your taxes are hard. When I'm using frameworks like this, I spend an awful lot of time alt-tabbing over to Chrome to figure out what pieces I need and how to use them. If you find yourself doing that too, worry not. That's how everyone programs.
 
 
 [Devise]: https://github.com/plataformatec/devise
