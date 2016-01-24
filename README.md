@@ -41,7 +41,7 @@ That's from the [Devise docs][Devise].
 
 Several of these modules come added for you by default if you run
 
-    `rails generate devise User`
+    rails generate devise User
 
 This generates a `User` model which includes this helpful bit at the top:
 
@@ -120,6 +120,8 @@ Devise is rather a lot to take in all at once. The thing about large and magical
 [registerable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Registerable
 [database_authenticable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/DatabaseAuthenticable
 [recoverable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Recoverable
+[rememberable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Rememberable
 [trackable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Trackable
 [validatable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Validatable
+[lockable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Lockable
 [omniauthable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Omniauthable
