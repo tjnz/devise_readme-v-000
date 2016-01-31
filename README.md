@@ -6,7 +6,7 @@
 
 ## Overview
 
-[Devise] is a gem for when you have a lot of needs.
+[Devise] is a gem for when you have a lot of authentication needs.
 
 Want to send confirmation emails, lock user accounts after a certain number of failed login attempts, and send password resets? Devise can do that.
 
