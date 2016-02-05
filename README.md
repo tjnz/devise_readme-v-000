@@ -38,7 +38,7 @@ Devise is made up of modules. Modules are applied to your `User` model, so you s
 
 That's from the [Devise docs][Devise].
 
-## Setup
+## Configuration
 
 Several of these modules come added for you by default if you run
 
@@ -111,7 +111,7 @@ Handles blocking a user's access after a certain number of attempts. Lockable ac
 Honestly, this one doesn't give you a whole lot more than omniauth already does. It does set some (but not all!) of the routes for you. That's a nice touch.
 
 
-## Part II Typical Setup
+## Typical Setup
 
 Add Devise to your Gemfile:
 ```ruby
