@@ -3,6 +3,7 @@
 ## Learning Objectives
 
   1. Describe the major architecture and modules of Devise.
+  2. Build a working login system using Devise.
 
 ## Overview
 
@@ -110,10 +111,66 @@ Handles blocking a user's access after a certain number of attempts. Lockable ac
 Honestly, this one doesn't give you a whole lot more than omniauth already does. It does set some (but not all!) of the routes for you. That's a nice touch.
 
 
-## Take a breath
+## Part II Typical Setup
 
-Devise is rather a lot to take in all at once. The thing about large and magical frameworks like Devise (and Rails for that matter) is that they aren't hard in the way that math problems are hard, but they are hard in the way that your taxes are hard. When I'm using frameworks like this, I spend an awful lot of time alt-tabbing over to Chrome to figure out what pieces I need and how to use them. If you find yourself doing that too, worry not. That's how everyone programs.
+Add Devise to your Gemfile:
+```ruby
+    gem 'devise'
+```
 
+Now run the installer:
+```ruby
+    rails generate devise:install
+```
+
+This creates a massive initializer in `config/initializers/devise.rb`. This is probably the single best source of documentation for Devise. You may wish to look through it.
+
+You'll notice that the installer prints a big notice of several things you should do. In particular, we should have a root route.
+
+Create a `WelcomeController` with a `home` action view and route.
+
+Now generate your `User` model with:
+```ruby
+    rails g devise User
+```
+
+Run `rake routes` and `rake db:migrate`. You should see that Devise has added a bunch of routes. Run `rails s` and take a look at one, maybe `/users/sign_in`.
+
+You should now have a working app with sign in.
+
+If you look at the routes you can see that Devise gives us a sign out route as well.  Let's implement that.
+
+We probably want the user to be able to click sign out on any page when they're logged in so let's add it to our layout.
+
+```erb
+#views/layouts/application.html.erb
+  ...
+  link_to("Sign out", destroy_user_session_path)
+  ...
+```
+
+Devise will also add messages to the flash when a user signs in or when there's an error.  We can add that to the layout as well so that those flash notices appear.
+
+```erb
+#views/layouts/application.html.erb
+  ...
+  <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+  <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+  <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+  ...
+```
+
+There's no navigation link for a user to get to the sign up page so let's add one of those as well.
+```erb
+#views/layouts/application.html.erb
+  ...
+  <%= link_to("Sign Up", new_user_registration_path) %>
+  ...
+```
+
+##Conclusion
+
+In a real app you'd probably want to add some css, maybe put these pieces into partials like a header or a nav partial but you can see how quickly and with how little code we were able to get a fully functioning login system.  Feel free to play around with the other Devise modules!
 
 [Devise]: https://github.com/plataformatec/devise
 [engine]: http://guides.rubyonrails.org/engines.html
