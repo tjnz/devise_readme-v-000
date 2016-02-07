@@ -74,7 +74,7 @@ Recoverable gives you password resets, like so:
     user = User.find(1)
     user.reset_password('password123', 'password123')
 
-    # creates a new token and send it with instructions about how to reset the password
+    # creates a new token and sends it with instructions about how to reset the password
     # (this one requires a mailer.)
     User.find(1).send_reset_password_instructions
 
@@ -182,3 +182,5 @@ In a real app you'd probably want to add some css, maybe put these pieces into p
 [validatable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Validatable
 [lockable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Lockable
 [omniauthable]: http://www.rubydoc.info/github/plataformatec/devise/master/Devise/Models/Omniauthable
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/devise_readme'>Devise</a> on Learn.co and start learning to code for free.</p>
